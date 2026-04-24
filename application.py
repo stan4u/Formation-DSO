@@ -137,7 +137,7 @@ def gen_reqtxt(directory):
 @app.route('/files')
 def files():
     path = f'{Path(__file__).parent}'
-    file_path = path + "\\files"
+    file_path = path + "/files"
     print(file_path)
     fichier = []
     for item in os.listdir(file_path):
@@ -159,7 +159,7 @@ def view_file():
     except Exception as e:
         abort(500, description=str(e))
 
-        
+
 if __name__ == '__main__':
     #Récupère le path de l'application
     app.run(host="0.0.0.0", port=5000)
